@@ -61,7 +61,7 @@ foreach ($data_info as $k => $v) {
 
 <body>
     <center>
-        <h1> Student Login Form </h1>
+        <h1>Login Form </h1>
     </center>
     <form>
         <div class="container">

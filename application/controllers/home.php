@@ -33,4 +33,5 @@ class Home extends CI_Controller
     }
 
     // path sẽ là index.php/nameController/tên method trong controller
+    // không được tạo action(method) có tên là list
 }

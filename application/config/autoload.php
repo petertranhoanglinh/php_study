@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$autoload ['helper'] = array ('url');
 
+$autoload['libraries'] = array('session');
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -133,3 +135,5 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array();
+
+

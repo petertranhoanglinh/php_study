@@ -1,13 +1,5 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-echo $title;
-foreach ($data_info as $k => $v) {
-    echo "$k : $v <br/>";
-}
-?>
-<!DOCTYPE html>
-<html>
 
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Login Page </title>
@@ -63,10 +55,10 @@ foreach ($data_info as $k => $v) {
     <center>
         <h1>Login Form </h1>
     </center>
-    <form>
+    <form action="/index.php/Login/customer_login" method="POST">
         <div class="container">
             <label>Username : </label>
-            <input type="text" placeholder="Enter Username" autocomplete="off" name="username" required>
+            <input type="text" placeholder="Enter Username" autocomplete="off" name="name" required>
             <label>Password : </label>
             <input type="password" placeholder="Enter Password" autocomplete="off" name="password" required>
             <button type="submit">Login</button>
@@ -74,7 +66,9 @@ foreach ($data_info as $k => $v) {
             <button type="button" class="cancelbtn"> Cancel</button>
             Forgot <a href="#"> password? </a>
         </div>
-    </form>
+   </form>
 </body>
 
 </html>
+
+

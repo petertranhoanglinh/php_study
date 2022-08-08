@@ -1,5 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+echo $title;
+foreach ($data_info as $k => $v) {
+    echo "$k : $v <br/>";
+}
 ?>
 <!DOCTYPE html>
 <html>

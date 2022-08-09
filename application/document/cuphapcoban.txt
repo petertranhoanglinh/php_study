@@ -27,3 +27,6 @@ $query=$this->db->get("users");
 4. lấy count trong câu query đó 
 $data = $query->num_rows();
 return $data;
+
+
+file database.php trong config để kết nối tới database

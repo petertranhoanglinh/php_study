@@ -1,0 +1,32 @@
+// return biến cho wiew
+$data = array(
+    "title" => "code framwork",
+    "author" => "kenney"
+);
+
+// tạo mảng trong wiew
+$data['data_info'] = array(
+    "name" => "kenney",
+    "level" => "2",
+    "email" => "kenney@gamil.com"
+);
+
+
+// hàm load trong ci_controller 
+gửi data lên wiew
+$this->load->view('login', $data);
+
+xử lý trên database
+1. connect database
+$this->load->database();
+2. search điều kiện theo trường
+$this->db->where("name",$name);
+$this->db->where("password",$pw);
+3. lấy data trong 1 bảng 
+$query=$this->db->get("users");
+4. lấy count trong câu query đó 
+$data = $query->num_rows();
+return $data;
+
+
+file database.php trong config để kết nối tới database

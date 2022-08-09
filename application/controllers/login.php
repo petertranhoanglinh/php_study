@@ -25,10 +25,10 @@ class Login extends CI_Controller {
             if ($user_result > 0) //active user record is present
             {
                
-                echo ('đăng nhập thành công');
+                echo "login suscess";
                 
             } else {
-                echo ('đăng nhập thất bại');
+                echo "password or username does not exist ";
             }
         }
         

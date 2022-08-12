@@ -17,7 +17,24 @@ class M_login extends CI_Model {
           $this->load->database();
           $result = $this->db->insert('users',$data);
           echo "suscess register";
-      } 
+      }
+
+      function updUser($data,$nameTxt){
+        $this->load->database();
+        $this->db->where('name',$nameTxt);
+        $this->db->update('users',$data);
+        echo "update suscess";
+    }
+
+      
+
+      public function getAllUser()  
+      {  
+         //data is retrive from this query  
+         $query = $this->db->get('users');  
+         return $query;  
+      }
+      
     }
     
  

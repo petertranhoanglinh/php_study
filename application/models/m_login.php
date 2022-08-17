@@ -14,8 +14,7 @@ class M_login extends CI_Model {
           return $data;
         }
       function insertUser($data){
-          $result = $this->db->insert('users',$data);
-          echo "suscess register";
+          $this->db->insert('users',$data);
       }
 
       function updUser($data,$nameTxt){

@@ -22,7 +22,7 @@ class M_login extends CI_Model {
         $this->db->update('users',$data);
         echo "update suscess";
     }
-
+    // in ở dev
       
 
       public function getAllUser()  

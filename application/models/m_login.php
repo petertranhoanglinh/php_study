@@ -3,10 +3,10 @@ class M_login extends CI_Model {
     public function __construct()
     {
       parent::__construct();
+      $this->load->database();
     }
     public function get_user($name,$pw)
         {
-          $this->load->database();
           $this->db->where("name",$name);
           $this->db->where("password",$pw);
           $query=$this->db->get("users");
@@ -14,13 +14,11 @@ class M_login extends CI_Model {
           return $data;
         }
       function insertUser($data){
-          $this->load->database();
           $result = $this->db->insert('users',$data);
           echo "suscess register";
       }
 
       function updUser($data,$nameTxt){
-        $this->load->database();
         $this->db->where('name',$nameTxt);
         $this->db->update('users',$data);
         echo "update suscess";
